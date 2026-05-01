@@ -54,15 +54,15 @@ Identical to `oursolve_tools`:
 
 | Token | Value |
 |-------|-------|
-| Primary | `#6366f1` |
-| Primary dark | `#4f46e5` |
-| Primary light | `#e0e7ff` |
+| Primary | `#1C4D8D` |
+| Primary dark | `#093C5D` |
+| Primary light | `#dbeafe` |
 | Background | `#f8fafc` |
 | Surface | `#ffffff` |
 | Text | `#0f172a` |
 | Text muted | `#64748b` |
 | Border | `#e2e8f0` |
-| Hero gradient | `linear-gradient(135deg, #1e1b4b, #312e81, #4338ca)` |
+| Hero gradient | `linear-gradient(135deg, #051e3e, #093C5D, #1C4D8D)` |
 | Font | `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif` |
 | Card radius | `16px` |
 
