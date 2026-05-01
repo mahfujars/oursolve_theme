@@ -1,0 +1,13 @@
+---
+deployment:
+  tasks:
+    - /bin/cp -R assets /home/oursolve/public_html/wp-content/themes/oursolve/
+    - /bin/cp footer.php /home/oursolve/public_html/wp-content/themes/oursolve/footer.php
+    - /bin/cp front-page.php /home/oursolve/public_html/wp-content/themes/oursolve/front-page.php
+    - /bin/cp functions.php /home/oursolve/public_html/wp-content/themes/oursolve/functions.php
+    - /bin/cp header.php /home/oursolve/public_html/wp-content/themes/oursolve/header.php
+    - /bin/cp home.php /home/oursolve/public_html/wp-content/themes/oursolve/home.php
+    - /bin/cp index.php /home/oursolve/public_html/wp-content/themes/oursolve/index.php
+    - /bin/cp page.php /home/oursolve/public_html/wp-content/themes/oursolve/page.php
+    - /bin/cp single.php /home/oursolve/public_html/wp-content/themes/oursolve/single.php
+    - /bin/cp style.css /home/oursolve/public_html/wp-content/themes/oursolve/style.css
