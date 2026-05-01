@@ -1,17 +1,34 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --primary-light: #e0e7ff;
+  --primary: #1C4D8D;
+  --primary-dark: #093C5D;
+  --primary-light: #dbeafe;
   --bg: #f8fafc;
   --surface: #ffffff;
   --text: #0f172a;
   --text-muted: #64748b;
   --border: #e2e8f0;
   --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06);
-  --shadow-hover: 0 4px 12px rgba(99,102,241,.2), 0 8px 32px rgba(0,0,0,.1);
+  --shadow-hover: 0 4px 12px rgba(28,77,141,.2), 0 8px 32px rgba(0,0,0,.1);
   --radius: 16px;
+  --nav-bg: #ffffff;
+  --hero-gradient: linear-gradient(135deg, #051e3e 0%, #093C5D 50%, #1C4D8D 100%);
+}
+
+[data-theme="dark"] {
+  --primary: #4d8fd4;
+  --primary-dark: #93c5fd;
+  --primary-light: #1e3a5f;
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border: #334155;
+  --shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
+  --shadow-hover: 0 4px 12px rgba(77,143,212,.25), 0 8px 32px rgba(0,0,0,.3);
+  --nav-bg: #1e293b;
+  --hero-gradient: linear-gradient(135deg, #020c1b 0%, #051e3e 50%, #093C5D 100%);
 }
 
 body {
@@ -24,7 +41,7 @@ body {
 
 /* ── Nav ── */
 .site-nav {
-  background: #fff;
+  background: var(--nav-bg);
   border-bottom: 1px solid var(--border);
   padding: 14px 24px;
   display: flex;
@@ -42,7 +59,7 @@ body {
 }
 .site-nav .brand .logo-icon {
   width: 30px; height: 30px;
-  background: linear-gradient(135deg, #a78bfa, #6366f1);
+  background: linear-gradient(135deg, #4d8fd4, #1C4D8D);
   border-radius: 7px;
   display: flex; align-items: center; justify-content: center;
   font-size: .9rem;
@@ -54,10 +71,18 @@ body {
   transition: color .15s;
 }
 .site-nav .nav-links a:hover { color: var(--primary); }
+.theme-toggle {
+  background: none; border: 1px solid var(--border); border-radius: 8px;
+  width: 36px; height: 36px; cursor: pointer; font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  margin-left: 8px; transition: background .15s, border-color .15s;
+  flex-shrink: 0;
+}
+.theme-toggle:hover { background: var(--bg); border-color: var(--primary); }
 
 /* ── Hero (homepage) ── */
 .site-hero {
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+  background: var(--hero-gradient);
   color: #fff;
   padding: 64px 24px 80px;
   text-align: center;
@@ -67,8 +92,8 @@ body {
 .site-hero::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 60% 0%, rgba(139,92,246,.3) 0%, transparent 60%),
-              radial-gradient(ellipse at 20% 100%, rgba(99,102,241,.2) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 60% 0%, rgba(77,143,212,.3) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 100%, rgba(28,77,141,.2) 0%, transparent 50%);
   pointer-events: none;
 }
 .site-hero .logo {
@@ -78,7 +103,7 @@ body {
 }
 .site-hero .logo-icon {
   width: 40px; height: 40px;
-  background: linear-gradient(135deg, #a78bfa, #6366f1);
+  background: linear-gradient(135deg, #4d8fd4, #1C4D8D);
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   font-size: 1.2rem;
@@ -102,7 +127,7 @@ body {
 .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 6px;
-  background: #fff; color: #4f46e5; font-weight: 700; font-size: .95rem;
+  background: #fff; color: #093C5D; font-weight: 700; font-size: .95rem;
   padding: 12px 28px; border-radius: 50px; text-decoration: none;
   transition: transform .15s, box-shadow .15s;
   box-shadow: 0 4px 16px rgba(0,0,0,.2);
@@ -127,7 +152,7 @@ body {
 
 /* ── Blog hero (smaller) ── */
 .blog-hero {
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+  background: var(--hero-gradient);
   color: #fff; padding: 48px 24px 56px; text-align: center;
 }
 .blog-hero h1 { font-size: clamp(1.8rem,4vw,2.6rem); font-weight: 800; margin-bottom: 10px; }
@@ -157,7 +182,7 @@ body {
   background: var(--bg); color: var(--text); outline: none;
   transition: border-color .15s, box-shadow .15s;
 }
-.search-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(99,102,241,.15); }
+.search-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(28,77,141,.15); }
 .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
   font-size: .82rem; font-weight: 600; padding: 6px 14px;
@@ -224,7 +249,7 @@ body {
 .post-date { font-size: .75rem; color: var(--text-muted); flex-shrink: 0; }
 
 /* ── Single post ── */
-.post-hero { background: linear-gradient(135deg,#1e1b4b,#312e81,#4338ca); color:#fff; padding:48px 24px 56px; text-align:center; }
+.post-hero { background: var(--hero-gradient); color:#fff; padding:48px 24px 56px; text-align:center; }
 .post-hero h1 { font-size: clamp(1.6rem,4vw,2.4rem); font-weight: 800; margin-bottom: 12px; max-width: 720px; margin-left: auto; margin-right: auto; }
 .post-hero .post-meta { color: rgba(255,255,255,.7); font-size: .9rem; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
 .post-main { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; transform: translateY(-32px); }
@@ -273,6 +298,20 @@ body {
   border-radius: 50px; background: var(--primary-light); transition: all .15s;
 }
 .view-all-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* ── Dark mode overrides ── */
+[data-theme="dark"] .site-nav { background: var(--nav-bg); }
+[data-theme="dark"] .toolbar { background: var(--surface); }
+[data-theme="dark"] .search-input { background: var(--bg); color: var(--text); border-color: var(--border); }
+[data-theme="dark"] .chip { background: var(--surface); color: var(--text-muted); border-color: var(--border); }
+[data-theme="dark"] .tool-card { background: var(--surface); border-color: var(--border); }
+[data-theme="dark"] .blog-card { background: var(--surface); border-color: var(--border); }
+[data-theme="dark"] .post-body { background: var(--surface); }
+[data-theme="dark"] .post-body pre { background: #0f172a; color: #e2e8f0; }
+[data-theme="dark"] .post-body code { background: #0f172a; }
+[data-theme="dark"] .state-box { background: var(--surface); }
+[data-theme="dark"] .pagination a, [data-theme="dark"] .pagination span { background: var(--surface); border-color: var(--border); color: var(--text-muted); }
+[data-theme="dark"] .btn-primary { background: var(--surface); color: var(--primary-dark); }
 
 @media(max-width:600px) {
   .site-hero { padding: 40px 16px 60px; }
