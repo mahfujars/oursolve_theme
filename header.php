@@ -15,7 +15,7 @@
   </a>
   <div class="nav-links">
     <a href="<?php echo home_url('/'); ?>">Home</a>
-    <a href="<?php echo home_url('/tools/'); ?>">Tools</a>
+    <a href="<?php echo home_url('/all-tools/'); ?>">Tools</a>
     <a href="<?php echo home_url('/blog/'); ?>">Blog</a>
   </div>
 </nav>

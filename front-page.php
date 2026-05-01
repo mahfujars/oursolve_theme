@@ -6,7 +6,7 @@
     <h1>Simple Tools for<br>Everyday Tasks</h1>
     <p>Fast, private, and free — every tool runs entirely in your browser. No sign-up. No tracking.</p>
     <div class="hero-actions">
-      <a href="<?php echo home_url('/tools/'); ?>" class="btn-primary">Browse All Tools</a>
+      <a href="<?php echo home_url('/all-tools/'); ?>" class="btn-primary">Browse All Tools</a>
       <a href="<?php echo home_url('/blog/'); ?>" class="btn-ghost">Read the Blog</a>
     </div>
   </div>
@@ -16,7 +16,7 @@
 
   <div class="section-header">
     <p class="section-title">Popular Tools</p>
-    <a href="<?php echo home_url('/tools/'); ?>" class="section-link">
+    <a href="<?php echo home_url('/all-tools/'); ?>" class="section-link">
       View all tools
       <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
