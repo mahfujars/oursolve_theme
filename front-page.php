@@ -40,12 +40,12 @@
 const ARROW = '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
 const FEATURED = ['qr-generator','password-generator','hash-generator','json-formatter','markdown-to-html','muslim-names'];
 
-fetch('/all-tools/tools.json')
+fetch('/tool/tools.json')
   .then(r => r.json())
   .then(tools => {
     const featured = FEATURED.map(slug => tools.find(t => t.slug === slug)).filter(Boolean);
     document.getElementById('featuredTools').innerHTML = featured.map(t =>
-      `<a class="tool-card" href="/all-tools/${t.slug}/">
+      `<a class="tool-card" href="/tool/${t.slug}/">
         <div class="tool-icon ${t.iconClass}">${t.icon}</div>
         <div><span class="tag">${t.category}</span><h2>${t.name}</h2></div>
         <p>${t.desc}</p>
