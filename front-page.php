@@ -46,11 +46,14 @@ fetch('/tool/tools.json')
     const featured = FEATURED.map(slug => tools.find(t => t.slug === slug)).filter(Boolean);
     document.getElementById('featuredTools').innerHTML = featured.map(t =>
       `<a class="tool-card" href="/tool/${t.slug}/">
-        <div class="tool-icon ${t.iconClass}">${t.icon}</div>
-        <div><span class="tag">${t.category}</span><h2>${t.name}</h2></div>
-        <p>${t.desc}</p>
-        <span class="tool-link">Open tool ${ARROW}</span>
-      </a>`
+    <div class="tool-card-top">
+      <div class="tool-icon ${t.iconClass}">${t.icon}</div>
+      <h2>${t.name}</h2>
+    </div>
+    <span class="tag">${t.category}</span>
+    <p class="tool-desc">${t.desc}</p>
+    <span class="tool-link">Open tool ${ARROW}</span>
+  </a>`
     ).join('');
   })
   .catch(() => {
