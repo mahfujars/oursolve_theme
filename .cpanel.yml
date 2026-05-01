@@ -9,5 +9,6 @@ deployment:
     - /bin/cp home.php /home/oursolve/public_html/wp-content/themes/oursolve/home.php
     - /bin/cp index.php /home/oursolve/public_html/wp-content/themes/oursolve/index.php
     - /bin/cp page.php /home/oursolve/public_html/wp-content/themes/oursolve/page.php
+    - /bin/cp page-tools.php /home/oursolve/public_html/wp-content/themes/oursolve/page-tools.php
     - /bin/cp single.php /home/oursolve/public_html/wp-content/themes/oursolve/single.php
     - /bin/cp style.css /home/oursolve/public_html/wp-content/themes/oursolve/style.css

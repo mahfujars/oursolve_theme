@@ -90,8 +90,40 @@ body {
 }
 .site-hero p {
   font-size: 1.15rem; color: rgba(255,255,255,.75);
-  max-width: 520px; margin: 0 auto; position: relative;
+  max-width: 520px; margin: 0 auto 28px; position: relative;
 }
+.hero-inner { position: relative; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+  border-radius: 20px; padding: 5px 16px; font-size: .82rem; font-weight: 600;
+  margin-bottom: 20px; color: rgba(255,255,255,.9);
+}
+.hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #fff; color: #4f46e5; font-weight: 700; font-size: .95rem;
+  padding: 12px 28px; border-radius: 50px; text-decoration: none;
+  transition: transform .15s, box-shadow .15s;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); font-weight: 600; font-size: .95rem;
+  padding: 12px 28px; border-radius: 50px; text-decoration: none;
+  border: 1px solid rgba(255,255,255,.25); transition: background .15s;
+}
+.btn-ghost:hover { background: rgba(255,255,255,.2); }
+
+/* ── Section header (title + "view all" link) ── */
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.section-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: .85rem; font-weight: 600; color: var(--primary); text-decoration: none;
+  transition: gap .15s;
+}
+.section-link:hover { gap: 8px; }
 
 /* ── Blog hero (smaller) ── */
 .blog-hero {
