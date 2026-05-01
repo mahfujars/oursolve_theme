@@ -85,7 +85,7 @@ body {
 .site-hero {
   background: var(--hero-gradient);
   color: #fff;
-  padding: 64px 24px 80px;
+  padding: 36px 24px 52px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -154,7 +154,7 @@ body {
 /* ── Blog hero (smaller) ── */
 .blog-hero {
   background: var(--hero-gradient);
-  color: #fff; padding: 48px 24px 56px; text-align: center;
+  color: #fff; padding: 28px 24px 40px; text-align: center;
 }
 .blog-hero h1 { font-size: clamp(1.8rem,4vw,2.6rem); font-weight: 800; margin-bottom: 10px; }
 .blog-hero p { color: rgba(255,255,255,.75); font-size: 1rem; }
@@ -259,7 +259,7 @@ body {
 .post-date { font-size: .75rem; color: var(--text-muted); flex-shrink: 0; }
 
 /* ── Single post ── */
-.post-hero { background: var(--hero-gradient); color:#fff; padding:48px 24px 56px; text-align:center; }
+.post-hero { background: var(--hero-gradient); color:#fff; padding:28px 24px 40px; text-align:center; }
 .post-hero h1 { font-size: clamp(1.6rem,4vw,2.4rem); font-weight: 800; margin-bottom: 12px; max-width: 720px; margin-left: auto; margin-right: auto; }
 .post-hero .post-meta { color: rgba(255,255,255,.7); font-size: .9rem; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
 .post-main { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; transform: translateY(-32px); }
