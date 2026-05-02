@@ -47,7 +47,7 @@ fetch('/tool/tools.json')
     document.getElementById('featuredTools').innerHTML = featured.map(t =>
       `<a class="tool-card" href="/tool/${t.slug}/">
     <div class="tool-card-top">
-      <div class="tool-icon ${t.iconClass}">${t.icon}</div>
+      <div class="tool-icon cat-${t.category.toLowerCase().replace(/\s+/g,'-')}"><i data-lucide="${t.icon}"></i></div>
       <h2>${t.name}</h2>
     </div>
     <span class="tag">${t.category}</span>
@@ -55,6 +55,7 @@ fetch('/tool/tools.json')
     <span class="tool-link">Open tool ${ARROW}</span>
   </a>`
     ).join('');
+    if (window.lucide) lucide.createIcons();
   })
   .catch(() => {
     document.getElementById('featuredTools').innerHTML =

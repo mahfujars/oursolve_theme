@@ -6,6 +6,7 @@ add_theme_support('html5', ['search-form','comment-form','comment-list','gallery
 function oursolve_assets() {
     wp_enqueue_style('oursolve-style', get_stylesheet_uri(), [], '1.0');
     wp_enqueue_style('oursolve-main', get_template_directory_uri() . '/assets/main.css', [], '1.0');
+    wp_enqueue_script('lucide', 'https://unpkg.com/lucide@latest/dist/umd/lucide.min.js', [], null, true);
 }
 add_action('wp_enqueue_scripts', 'oursolve_assets');
 

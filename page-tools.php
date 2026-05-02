@@ -41,7 +41,7 @@ fetch('/tool/tools.json')
 function cardHTML(t) {
   return `<a class="tool-card" href="/tool/${t.slug}/">
     <div class="tool-card-top">
-      <div class="tool-icon ${t.iconClass}">${t.icon}</div>
+      <div class="tool-icon cat-${t.category.toLowerCase().replace(/\s+/g,'-')}"><i data-lucide="${t.icon}"></i></div>
       <h2>${t.name}</h2>
     </div>
     <span class="tag">${t.category}</span>
@@ -76,6 +76,7 @@ function renderTools() {
   }
   if (q || activeFilter !== 'All') {
     container.innerHTML = `<div class="tools-grid">${filtered.map(cardHTML).join('')}</div>`;
+    if (window.lucide) lucide.createIcons();
     return;
   }
   const groups = {};
@@ -85,6 +86,7 @@ function renderTools() {
       <div class="category-heading"><h3>${c}</h3><span class="count-badge">${groups[c].length}</span></div>
       <div class="tools-grid">${groups[c].map(cardHTML).join('')}</div>
     </section>`).join('');
+  if (window.lucide) lucide.createIcons();
 }
 
 document.getElementById('searchInput').addEventListener('input', e => { searchTerm = e.target.value; renderTools(); });
