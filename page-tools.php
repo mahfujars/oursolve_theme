@@ -26,7 +26,7 @@ get_header(); ?>
 <?php get_footer(); ?>
 
 <script>
-const CATEGORY_ORDER = ['Developer','Security','Generator','Encoding','Writing','PDF Tools','Islamic'];
+const CATEGORY_ORDER = ['Developer','Security','Generator','Encoding','Writing','PDF Tools','Image Tools','Islamic'];
 const ARROW = '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
 let TOOLS = [], activeFilter = 'All', searchTerm = '';
 
