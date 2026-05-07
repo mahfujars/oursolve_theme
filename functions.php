@@ -30,6 +30,13 @@ add_action('rest_api_init', function() {
 add_filter('excerpt_length', fn() => 25);
 add_filter('excerpt_more', fn() => '…');
 
+// Blog listing: 1 featured + 10 grid = 11 per page
+add_action('pre_get_posts', function($q) {
+    if (!is_admin() && $q->is_main_query() && $q->is_home()) {
+        $q->set('posts_per_page', 11);
+    }
+});
+
 // Custom title tag
 add_filter('document_title_parts', function($parts) {
     if (is_front_page()) {
