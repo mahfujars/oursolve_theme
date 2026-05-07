@@ -38,6 +38,10 @@ $current_cat = get_query_var('cat');
     $first = true;
     ?>
 
+    <?php if ($paged > 1) : ?>
+      <div class="blog-grid">
+    <?php endif; ?>
+
     <?php while (have_posts()) : the_post(); ?>
 
       <?php
@@ -106,9 +110,7 @@ $current_cat = get_query_var('cat');
 
     <?php endwhile; ?>
 
-    <?php if (!$first) : ?>
       </div><!-- /.blog-grid -->
-    <?php endif; ?>
 
     <div class="blog-pagination">
       <?php
